@@ -1,0 +1,126 @@
+// layout
+.page {
+  .image {
+    height: 100vh;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .content {
+    width: 95vw;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+// position
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  label {
+    justify-self: left;
+  }
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+}
+
+// design
+.cover {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 70%;
+  max-width: 450px;
+}
+
+.input-icon {
+  width: 25px;
+  position: absolute;
+  right: 0;
+  top: 27px;
+}
+
+.field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  outline: 0;
+  margin-bottom: 1em;
+  font-size: 1rem;
+  font-family: $fnt1;
+  color: white;
+  padding: 1em 0 0 0;
+  background: transparent;
+  transition: border-color 0.5s;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  font-family: $fnt2;
+  font-weight: 500;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: white;
+}
+
+// input {
+
+// }
+
+#submit {
+  all: unset;
+  margin: 2em;
+  @include pr-btn;
+}
+
+.sc-btn {
+  @include sc-btn;
+}
+
+.error {
+  font-family: $fnt2;
+  color: red;
+}
+
+@media screen and(min-width:1000px) {
+  .page {
+    background-color: black;
+  }
+  .page {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .image img {
+      width: 45vw;
+    }
+    .content {
+      position: relative;
+      top: 40vh;
+      right: unset;
+      transform: translateY(-50%);
+      left: 0%;
+    }
+    .login-content {
+      top: 27vh;
+    }
+    label {
+      position: relative;
+    }
+    .input-icon {
+      top: 47px;
+    }
+  }
+}
